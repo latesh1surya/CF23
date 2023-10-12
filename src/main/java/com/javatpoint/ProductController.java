@@ -32,8 +32,11 @@ public class ProductController
     @GetMapping(value = "/getReportsColour")
     public Data getReportsColour(@RequestParam int colourCode) 
     {
-    
+        if(colourCode ==-1){
+			return getReports();
+		}else{
         return securityService.getReportsColour(colourCode);
+        }
     
     }
     
