@@ -30,15 +30,38 @@ public class SecurityService implements ISecurityService {
 
 	@Override
 	public Data getReports() {
+		
+		
 		Data data = new Data();
 		data.setTotal(TestData.AppointmentDetails.size());
-		data.setGreen(2);
-		data.setRed(2);
-		data.setYellow(2);
+		int colourGreen=0;
+		int colourRed=0;
+		int colourYellow=0;
+		//data.setGreen(2);
+		//data.setRed(2);
+		//data.setYellow(2);
 		List<AppointmentDetails> apd = new ArrayList<AppointmentDetails>();
 		for (Map.Entry<String, AppointmentDetails> entry : TestData.AppointmentDetails.entrySet()) {
-			apd.add(entry.getValue());
+			if(entry.getValue().getStatus()==1)
+			{
+				colourGreen++;
+			}else if(entry.getValue().getStatus()==2){
+				colourYellow++;
+			}else if(entry.getValue().getStatus()==3){
+				colourRed++;
+			}
+
+		apd.add(entry.getValue());
 		}
+
+		
+			data.setGreen(colourGreen);
+		
+		
+			data.setYellow(colourYellow);
+		
+			data.setRed(colourRed);
+		
 		data.setAppointmentDetailsList(apd);
 		return data;
 	}
@@ -52,7 +75,46 @@ public class SecurityService implements ISecurityService {
 
 	@Override
 	public String checkInOut(String appointmentIdr,String status) {
+		if(TestData.AppointmentDetails.get(appointmentIdr) != null){
 		TestData.AppointmentDetails.get(appointmentIdr).setStatus(Integer.parseInt(status));
 		return "success";
+		}else {
+			return "fail";
+		}
+	}
+
+
+
+	@Override
+	public Data getReportsColour(int colourCode) {
+		
+		Data data = new Data();
+		data.setTotal(TestData.AppointmentDetails.size());
+		int colourCount=0;
+		//data.setGreen(2);
+		//data.setRed(2);
+		//data.setYellow(2);
+		List<AppointmentDetails> apd = new ArrayList<AppointmentDetails>();
+		for (Map.Entry<String, AppointmentDetails> entry : TestData.AppointmentDetails.entrySet()) {
+			if(entry.getValue().getStatus()==colourCode)
+			{
+				colourCount++;
+			apd.add(entry.getValue());
+		}
+		}
+
+		if(colourCode==1)
+		{
+			data.setGreen(colourCount);
+		}else if(colourCode==2)
+		{
+			data.setYellow(colourCount);
+		}
+		else if(colourCode==3){
+			data.setRed(colourCount);
+		}
+		data.setAppointmentDetailsList(apd);
+		return data;
+		
 	}
 }

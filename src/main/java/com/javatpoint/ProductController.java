@@ -28,6 +28,14 @@ public class ProductController
     
         return securityService.getReports();
     }
+
+    @GetMapping(value = "/getReportsColour")
+    public Data getReportsColour(@RequestParam int colourCode) 
+    {
+    
+        return securityService.getReportsColour(colourCode);
+    
+    }
     
     @GetMapping(value = "/updateSOS")
     public String updateSOS(@RequestParam String appointmentIdr) 

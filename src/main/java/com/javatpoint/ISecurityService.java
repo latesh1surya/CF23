@@ -7,6 +7,7 @@ public interface ISecurityService {
     public String updateSOS(String appointmentIdr) ;
     public String addAlert(String appointmentIdr,String status) ;
     public String checkInOut(String appointmentIdr,String status);
+    public Data getReportsColour(int colourCode);
     
 
 }

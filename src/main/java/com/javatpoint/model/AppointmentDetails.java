@@ -6,7 +6,7 @@ public class AppointmentDetails {
 
 
 
-	private String idr;
+	private int idr;
 
 
 
@@ -49,21 +49,21 @@ public class AppointmentDetails {
 	private String creationDate;
 
 
-	public AppointmentDetails(String idr, int countsellor, int client, int admin, String appointmentStartTime,
-	String appointmentEndTime, String appointmentLocation, String authorityContact, String result,
-	int status, String creationDate) {
-this.idr = idr;
-Countsellor = countsellor;
-this.client = client;
-this.admin = admin;
-this.appointmentStartTime = appointmentStartTime;
-this.appointmentEndTime = appointmentEndTime;
-this.appointmentLocation = appointmentLocation;
-this.authorityContact = authorityContact;
-this.result = result;
-this.status = status;
-this.creationDate = creationDate;
-}
+public AppointmentDetails(int idr, int countsellor, int client, int admin, String appointmentStartTime,
+            String appointmentEndTime, String appointmentLocation, String authorityContact, String result,
+            int status, String creationDate) {
+        this.idr = idr;
+        Countsellor = countsellor;
+        this.client = client;
+        this.admin = admin;
+        this.appointmentStartTime = appointmentStartTime;
+        this.appointmentEndTime = appointmentEndTime;
+        this.appointmentLocation = appointmentLocation;
+        this.authorityContact = authorityContact;
+        this.result = result;
+        this.status = status;
+        this.creationDate = creationDate;
+    }
 
 	public String getAppointmentStartTime() {
 
@@ -173,6 +173,38 @@ this.creationDate = creationDate;
 
 		this.creationDate = creationDate;
 
+	}
+
+	public int getIdr() {
+		return idr;
+	}
+
+	public void setIdr(int idr) {
+		this.idr = idr;
+	}
+
+	public int getCountsellor() {
+		return Countsellor;
+	}
+
+	public void setCountsellor(int countsellor) {
+		Countsellor = countsellor;
+	}
+
+	public int getClient() {
+		return client;
+	}
+
+	public void setClient(int client) {
+		this.client = client;
+	}
+
+	public int getAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(int admin) {
+		this.admin = admin;
 	}
 
 
