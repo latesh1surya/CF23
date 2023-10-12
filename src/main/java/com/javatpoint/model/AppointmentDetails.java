@@ -11,11 +11,11 @@ public class AppointmentDetails {
 
 
 	private int Countsellor;
-
+private String CountsellorName;
 
 
 	private int client;
-
+private String clientName;
 
 
 	private int admin;
@@ -64,6 +64,40 @@ public AppointmentDetails(int idr, int countsellor, int client, int admin, Strin
         this.status = status;
         this.creationDate = creationDate;
     }
+
+	public AppointmentDetails(int idr, int countsellor, String countsellorName, int client, String clientName, int admin,
+		String appointmentStartTime, String appointmentEndTime, String appointmentLocation, String authorityContact,
+		String result, int status, String creationDate) {
+	this.idr = idr;
+	Countsellor = countsellor;
+	CountsellorName = countsellorName;
+	this.client = client;
+	this.clientName = clientName;
+	this.admin = admin;
+	this.appointmentStartTime = appointmentStartTime;
+	this.appointmentEndTime = appointmentEndTime;
+	this.appointmentLocation = appointmentLocation;
+	this.authorityContact = authorityContact;
+	this.result = result;
+	this.status = status;
+	this.creationDate = creationDate;
+}
+
+	public String getCountsellorName() {
+	return CountsellorName;
+}
+
+public void setCountsellorName(String countsellorName) {
+	CountsellorName = countsellorName;
+}
+
+public String getClientName() {
+	return clientName;
+}
+
+public void setClientName(String clientName) {
+	this.clientName = clientName;
+}
 
 	public String getAppointmentStartTime() {
 

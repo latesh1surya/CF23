@@ -46,27 +46,27 @@ CounsellorMap.put("2", counsellor2);
 
 AppointmentDetails = new HashMap<String, AppointmentDetails>();
 
-AppointmentDetails data1 = new AppointmentDetails(1, 1, 1, 1, "11-10-23 11:00:00", "11-10-23 12:00:00",
-"Pune", "Jack", "Inprogrss", 0, "11-10-23 11:12:00");
+AppointmentDetails data1 = new AppointmentDetails(1, 1,"happy", 1,"jack", 1, "11-10-23 11:00:00", "11-10-23 12:00:00",
+"Pune", "Jack", "Inprogress", 0, "11-10-23 11:12:00");
 
-AppointmentDetails data2 = new AppointmentDetails(2, 1, 2, 1, "11-10-23 11:30:00", "11-10-23 13:00:00",
-"Pune", "Jack", "Inprogrss", 0, "11-10-23 11:12:00");
+AppointmentDetails data2 = new AppointmentDetails(2, 1,"happy", 2, "john",1, "11-10-23 11:30:00", "11-10-23 13:00:00",
+"Pune", "Jack", "Inprogress", 0, "11-10-23 11:12:00");
 
-AppointmentDetails data3 = new AppointmentDetails(3, 2, 1, 1, "13-10-23 11:00:00", "13-10-23 13:00:00",
-"Pune", "Jack", "Inprogrss", 0, "11-10-23 11:12:00");
+AppointmentDetails data3 = new AppointmentDetails(3, 2,"jack", 1, "jack",1, "13-10-23 11:00:00", "13-10-23 13:00:00",
+"Pune", "Jack", "Inprogress", 0, "11-10-23 11:12:00");
 
-AppointmentDetails data4 = new AppointmentDetails(4, 2, 2, 1, "14-10-23 11:00:00", "14-10-23 14:30:00",
-"Pune", "Jack", "Inprogrss", 0, "11-10-23 11:12:00");
+AppointmentDetails data4 = new AppointmentDetails(4, 2, "jack",2,"john", 1, "14-10-23 11:00:00", "14-10-23 14:30:00",
+"Pune", "Jack", "Inprogress", 0, "11-10-23 11:12:00");
 
 
-AppointmentDetails data5 = new AppointmentDetails(5, 1, 2, 1, "11-10-23 11:30:00", "11-10-23 13:00:00",
-"Pune", "Jack", "Inprogrss", 1, "11-10-23 11:12:00");
+AppointmentDetails data5 = new AppointmentDetails(5, 1, "happy",2, "john",1, "11-10-23 11:30:00", "11-10-23 13:00:00",
+"Pune", "Jack", "Inprogress", 1, "11-10-23 11:12:00");
 
-AppointmentDetails data6 = new AppointmentDetails(6, 2, 1, 1, "13-10-23 11:00:00", "13-10-23 13:00:00",
-"Pune", "Jack", "Inprogrss", 2, "11-10-23 11:12:00");
+AppointmentDetails data6 = new AppointmentDetails(6, 2,"happy", 1,"jack", 1, "13-10-23 11:00:00", "13-10-23 13:00:00",
+"Pune", "Jack", "Inprogress", 2, "11-10-23 11:12:00");
 
-AppointmentDetails data7 = new AppointmentDetails(7, 2, 2, 1, "14-10-23 11:00:00", "14-10-23 14:30:00",
-"Pune", "Jack", "Inprogrss", 3, "11-10-23 11:12:00");
+AppointmentDetails data7 = new AppointmentDetails(7, 2,"happy", 2,"john", 1, "14-10-23 11:00:00", "14-10-23 14:30:00",
+"Pune", "Jack", "Inprogress", 3, "11-10-23 11:12:00");
 
 AppointmentDetails.put("1", data1);
 
